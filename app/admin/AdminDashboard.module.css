@@ -1,0 +1,243 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  font-family: 'Canva Sans', sans-serif;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background-color: black;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebarTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.navButton {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 15px;
+  margin-bottom: 12px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.navButton:hover {
+  background-color: #1a1a1a;
+}
+
+.navButtonActive {
+  background-color: white;
+  color: black;
+}
+
+/* MAIN CONTENT */
+.main {
+  flex: 1;
+  padding: 20px;
+  background-color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* BADGES */
+.badgesContainer {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+  color: white;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.badgeUploadForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.badgeUploadForm input {
+  padding: 8px 10px;
+  background-color: black;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: white;
+  width: 150px;
+}
+
+.badgeUploadForm button {
+  padding: 8px 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.badgeUploadForm button:hover {
+  background-color: #2563eb;
+}
+
+.dropZone {
+  border: 2px dashed #555;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  min-width: 160px;
+}
+
+.dropZone:hover {
+  border-color: #3b82f6;
+}
+
+.previewImage {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.imagePreviewWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.removeImageButton {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+
+/* TABLE */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border: 1px solid #333;
+  background-color: #000;
+  text-align: center;
+}
+
+.inlineInput {
+  background-color: black;
+  border: 1px solid #666;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  width: 80px;
+}
+
+.table button {
+  background-color: #facc15;
+  border: none;
+  padding: 6px 10px;
+  margin-right: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.table button:last-child {
+  background-color: #ef4444;
+  color: white;
+}
+
+.table button:hover {
+  opacity: 0.85;
+}
+
+/* USER MGMT PLACEHOLDER */
+.usersContainer {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 10px;
+  }
+
+  .navButton {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .main {
+    padding: 16px;
+  }
+
+  .table th,
+  .table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .badgeUploadForm {
+    flex-direction: column;
+  }
+}
