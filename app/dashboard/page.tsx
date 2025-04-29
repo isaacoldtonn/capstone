@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { createClient } from "@/utils/supabase/client";
 import useUserStore from "@/stores/useUserStore";
 import InitUserStore from "@/components/init-user-store";
+import { useEffect } from "react";
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -13,6 +14,14 @@ export default function DashboardPage() {
     clearUser();
     router.push("/sign-in");
   };
+
+  useEffect(() => {
+    if (user?.role === "admin") {
+      router.push("/badges-management");
+    }
+  }, [user, router]);
+
+  if (!user) return <InitUserStore />
 
   return (
     <>

@@ -26,7 +26,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="h-dvh w-dvw">
+    <html lang="en" suppressHydrationWarning className="h-dvh w-dvw dark">
       <head />
       <body className={`${geistSans.className} bg-background text-foreground`}>
         <ThemeProvider
